@@ -17,9 +17,9 @@ const RoutesApp = () => {
             <Fragment>
                 <Routes>
                    <Route exact path="/home" element={<Private Item={Home}/> } />
-                   <Route path="/" element={<signin />}/>
-                   <Route exact path="/signup" element={<signup />} />
-                   <Route path="*" element={<signin />} /> 
+                   <Route path="/" element={<Signin />}/>
+                   <Route exact path="/signup" element={<Signup />} />
+                   <Route path="*" element={<Signin />} /> 
                 </Routes>
             </Fragment>
         </BrowserRouter>
