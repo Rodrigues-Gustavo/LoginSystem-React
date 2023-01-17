@@ -12,18 +12,18 @@ const Signup = () => {
   const [error, setError] = useState("");
   const navigate = useNavigate();
 
-  const { Signup } = useAuth();
+  const { signup } = useAuth();
 
   const handleSignup = () => {
     if (!email | !emailConf | !password) {
       setError("Preencha todos os campos");
       return;
-    } else if (password !== emailConf) {
+    } else if (email !== emailConf) {
       setError("Os e-mails não são iguais");
       return;
     }
 
-    const res = Signup(email, password);
+    const res = signup(email, password);
     
     if (res) {
       setError(res);
